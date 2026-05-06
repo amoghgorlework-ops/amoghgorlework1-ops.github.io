@@ -1,0 +1,1623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Initium Cafe & More | Best Cafe in Hinjawadi, Pune | Luxury Dining & Romantic Ambiance</title>
+<meta name="description" content="Initium Cafe & More — Pune's finest luxury dining experience in Hinjawadi. Romantic ambiance, chef-crafted menus, and unforgettable moments. Rated 4.9★. Book your table today.">
+<meta name="keywords" content="best cafe in Pune, luxury cafe Hinjawadi, romantic restaurant Pune, best food Pune, cafe for couples Pune, college cafe Hinjawadi, Initium cafe, fine dining Pune, best ambiance cafe Pune">
+<meta property="og:title" content="Initium Cafe & More | Best Cafe in Pune">
+<meta property="og:description" content="An authentic luxury dining experience in Hinjawadi, Pune. Where every visit is a new beginning.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --gold: #C9A86C;
+    --gold-light: #E8D5A3;
+    --gold-dark: #8B6914;
+    --cream: #FAF7F0;
+    --dark: #0F0D0A;
+    --dark-2: #1A1714;
+    --dark-3: #2A2520;
+    --text-light: #F5EFE0;
+    --text-muted: #A89880;
+    --accent-rose: #C4797A;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--dark);
+    color: var(--text-light);
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.2rem 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background 0.4s, backdrop-filter 0.4s;
+  }
+  nav.scrolled {
+    background: rgba(15,13,10,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(201,168,108,0.15);
+  }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--gold);
+    letter-spacing: 0.08em;
+    text-decoration: none;
+  }
+  .nav-logo span { font-style: italic; color: var(--text-light); }
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-cta {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.6rem 1.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 4px;
+  }
+  .hamburger span {
+    width: 24px; height: 1.5px;
+    background: var(--gold);
+    display: block;
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--dark-2);
+    z-index: 99;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    color: var(--text-light);
+    text-decoration: none;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute;
+    top: 1.5rem; right: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 2rem;
+    cursor: pointer;
+  }
+
+  /* ── HERO ── */
+  #home {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 60% 50% at 70% 40%, rgba(201,168,108,0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 40% 40% at 20% 70%, rgba(196,121,122,0.06) 0%, transparent 60%);
+  }
+  .hero-pattern {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--gold) 0, var(--gold) 1px,
+      transparent 0, transparent 50%
+    );
+    background-size: 30px 30px;
+  }
+  .hero-content {
+    position: relative;
+    text-align: center;
+    padding: 2rem;
+    max-width: 900px;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: '';
+    width: 40px; height: 1px;
+    background: var(--gold);
+    opacity: 0.5;
+  }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(3rem, 8.5vw, 6.5rem);
+    font-weight: 300;
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-subtitle {
+    font-family: var(--font-display);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    letter-spacing: 0.05em;
+  }
+  .hero-desc {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    max-width: 480px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--dark);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  .btn-primary:hover { background: var(--gold-light); }
+  .btn-outline {
+    background: transparent;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    border: 1px solid rgba(245,239,224,0.3);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+  .hero-rating {
+    position: absolute;
+    bottom: 3rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+  }
+  .stars { color: var(--gold); letter-spacing: 2px; font-size: 0.85rem; }
+  .rating-divider { width: 1px; height: 24px; background: rgba(201,168,108,0.2); }
+
+  /* ── SECTIONS COMMON ── */
+  section { padding: 7rem 0; }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+  .section-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  .section-eyebrow::after { content: ''; flex: 1; max-width: 50px; height: 1px; background: var(--gold); opacity: 0.4; }
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 300;
+    line-height: 1.05;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-lead {
+    font-size: 0.9rem;
+    font-weight: 300;
+    color: var(--text-muted);
+    line-height: 1.9;
+    max-width: 540px;
+  }
+
+  /* ── AMBIANCE STRIP ── */
+  #ambiance {
+    padding: 0;
+    background: var(--dark-2);
+  }
+  .ambiance-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    height: 380px;
+  }
+  .ambiance-cell {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+    cursor: default;
+  }
+  .ambiance-cell-bg {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.6s ease;
+  }
+  .ambiance-cell:hover .ambiance-cell-bg { transform: scale(1.04); }
+  .ambiance-cell-1 .ambiance-cell-bg { background: linear-gradient(135deg, #1a0f05 0%, #3d2812 50%, #1a0f05 100%); }
+  .ambiance-cell-2 .ambiance-cell-bg { background: linear-gradient(135deg, #0d1520 0%, #1a2d3d 50%, #0d1520 100%); }
+  .ambiance-cell-3 .ambiance-cell-bg { background: linear-gradient(135deg, #1a0a10 0%, #3d1520 50%, #1a0a10 100%); }
+  .ambiance-cell-4 .ambiance-cell-bg { background: linear-gradient(135deg, #0f1a0a 0%, #1f3515 50%, #0f1a0a 100%); }
+  .ambiance-cell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+  }
+  .ambiance-icon {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 2.5rem;
+    opacity: 0.15;
+    z-index: 1;
+  }
+  .ambiance-label {
+    position: relative;
+    z-index: 2;
+  }
+  .ambiance-label h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.25rem;
+  }
+  .ambiance-label p {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── MENU ── */
+  #menu { background: var(--dark-2); }
+  .menu-tabs {
+    display: flex;
+    gap: 0;
+    margin-bottom: 4rem;
+    border-bottom: 1px solid rgba(201,168,108,0.1);
+  }
+  .menu-tab {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    background: none;
+    border: none;
+    padding: 0.8rem 1.8rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    transition: all 0.3s;
+  }
+  .menu-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .menu-tab:hover { color: var(--text-light); }
+  .menu-panel { display: none; }
+  .menu-panel.active { display: block; }
+  .menu-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0; }
+  .menu-item {
+    padding: 1.8rem 0;
+    border-bottom: 1px solid rgba(201,168,108,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    transition: background 0.3s;
+  }
+  .menu-item:hover { background: rgba(201,168,108,0.03); }
+  .menu-item:nth-child(odd) { padding-right: 3rem; border-right: 1px solid rgba(201,168,108,0.08); }
+  .menu-item:nth-child(even) { padding-left: 3rem; }
+  .menu-item-info h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+  }
+  .menu-item-info p {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 280px;
+  }
+  .menu-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.6rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .menu-price {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .menu-special {
+    margin-top: 4rem;
+    padding: 3rem;
+    border: 1px solid rgba(201,168,108,0.2);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2rem;
+    align-items: center;
+    background: rgba(201,168,108,0.03);
+  }
+  .menu-special-badge {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .menu-special-badge::before { content: '★'; }
+  .menu-special h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+  .menu-special p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    max-width: 500px;
+  }
+
+  /* ── ABOUT ── */
+  #about { background: var(--dark); }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-visual-frame {
+    aspect-ratio: 3/4;
+    background: var(--dark-3);
+    border: 1px solid rgba(201,168,108,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-visual-inner {
+    position: absolute;
+    inset: 2rem;
+    background: linear-gradient(135deg, rgba(201,168,108,0.05) 0%, rgba(196,121,122,0.05) 100%);
+    border: 1px solid rgba(201,168,108,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .about-monogram {
+    font-family: var(--font-display);
+    font-size: 6rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: 0.2;
+    line-height: 1;
+  }
+  .about-year {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .about-stat-card {
+    position: absolute;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    background: var(--gold);
+    padding: 1.5rem 2rem;
+    color: var(--dark);
+    min-width: 140px;
+  }
+  .about-stat-num {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1;
+    display: block;
+  }
+  .about-stat-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.7;
+  }
+  .about-content { }
+  .about-content p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+  }
+  .about-content p strong { color: var(--text-light); font-weight: 500; }
+  .about-values {
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .about-value {
+    padding: 1.2rem;
+    border-left: 2px solid rgba(201,168,108,0.3);
+    padding-left: 1.2rem;
+  }
+  .about-value h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--gold);
+    margin-bottom: 0.3rem;
+  }
+  .about-value p { font-size: 0.78rem; color: var(--text-muted); margin: 0; line-height: 1.6; }
+  .about-future {
+    margin-top: 3rem;
+    padding: 2rem;
+    border: 1px solid rgba(201,168,108,0.15);
+  }
+  .about-future h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .about-future p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.8; margin: 0; }
+
+  /* ── REVIEWS ── */
+  #reviews { background: var(--dark-3); }
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+  .review-card {
+    padding: 2rem;
+    border: 1px solid rgba(201,168,108,0.1);
+    position: relative;
+  }
+  .review-card::before {
+    content: '"';
+    font-family: var(--font-display);
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.1;
+    position: absolute;
+    top: 0.5rem;
+    left: 1.2rem;
+    line-height: 1;
+  }
+  .review-stars { color: var(--gold); font-size: 0.8rem; margin-bottom: 1rem; letter-spacing: 3px; }
+  .review-text {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+  .review-author {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ── GALLERY / EXPERIENCE ── */
+  #experience { background: var(--dark-2); }
+  .experience-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 260px 260px;
+    gap: 1rem;
+    margin-top: 3rem;
+  }
+  .exp-cell {
+    background: var(--dark-3);
+    border: 1px solid rgba(201,168,108,0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+  }
+  .exp-cell:first-child { grid-row: 1 / 3; }
+  .exp-cell-bg {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    opacity: 0.06;
+    transition: transform 0.5s;
+  }
+  .exp-cell:hover .exp-cell-bg { transform: scale(1.1); }
+  .exp-cell-label {
+    position: relative;
+    z-index: 2;
+  }
+  .exp-cell-label span {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  .exp-cell-label h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-light);
+  }
+  .exp-cell::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15,13,10,0.8) 0%, transparent 60%);
+  }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--dark); }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 5rem;
+    align-items: start;
+  }
+  .contact-info {}
+  .contact-block {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgba(201,168,108,0.08);
+  }
+  .contact-block:last-child { border-bottom: none; }
+  .contact-block-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .contact-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-light);
+    margin-bottom: 0.3rem;
+  }
+  .contact-block p, .contact-block a {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s;
+  }
+  .contact-block a:hover { color: var(--gold); }
+  .social-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .social-link {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(201,168,108,0.15);
+    transition: all 0.3s;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+  .hours-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.3rem 2rem; }
+  .hours-row { display: flex; justify-content: space-between; font-size: 0.82rem; color: var(--text-muted); padding: 0.2rem 0; }
+  .hours-row span:last-child { color: var(--text-light); }
+
+  /* Booking Form */
+  .booking-form {
+    padding: 3rem;
+    border: 1px solid rgba(201,168,108,0.15);
+    background: rgba(201,168,108,0.02);
+  }
+  .booking-form h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-light);
+    margin-bottom: 0.5rem;
+  }
+  .booking-form p {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+  .form-input, .form-select, .form-textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,108,0.15);
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    padding: 0.8rem 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+    appearance: none;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--gold); }
+  .form-select option { background: var(--dark-2); color: var(--text-light); }
+  .form-textarea { resize: vertical; min-height: 80px; }
+  .form-submit {
+    width: 100%;
+    background: var(--gold);
+    color: var(--dark);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 0.5rem;
+  }
+  .form-submit:hover { background: var(--gold-light); }
+  .form-success {
+    display: none;
+    text-align: center;
+    padding: 2rem;
+  }
+  .form-success h4 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .form-success p { font-size: 0.85rem; color: var(--text-muted); }
+
+  /* ── MAP ── */
+  .map-embed {
+    margin-top: 5rem;
+    border: 1px solid rgba(201,168,108,0.15);
+    overflow: hidden;
+  }
+  .map-header {
+    padding: 1.5rem 2rem;
+    background: var(--dark-2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(201,168,108,0.1);
+  }
+  .map-header h4 {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-light);
+  }
+  .map-header a {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+  }
+  .map-frame {
+    width: 100%;
+    height: 300px;
+    background: var(--dark-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .map-frame p { font-size: 0.82rem; color: var(--text-muted); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--dark-2);
+    border-top: 1px solid rgba(201,168,108,0.1);
+    padding: 4rem 0 2rem;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  .footer-brand {}
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    display: block;
+  }
+  .footer-logo em { font-style: italic; color: var(--text-muted); }
+  .footer-tagline { font-size: 0.78rem; color: var(--text-muted); line-height: 1.7; max-width: 240px; }
+  .footer-col h5 {
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .footer-col a, .footer-col p {
+    display: block;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s;
+    line-height: 1.6;
+  }
+  .footer-col a:hover { color: var(--text-light); }
+  .footer-bottom {
+    padding-top: 2rem;
+    border-top: 1px solid rgba(201,168,108,0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .footer-copy { font-size: 0.72rem; color: var(--text-muted); }
+  .footer-seo { font-size: 0.68rem; color: rgba(168,152,128,0.5); }
+
+  /* ── SCROLL ANIMATIONS ── */
+  .fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .fade-up:nth-child(2) { transition-delay: 0.1s; }
+  .fade-up:nth-child(3) { transition-delay: 0.2s; }
+  .fade-up:nth-child(4) { transition-delay: 0.3s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 1024px) {
+    nav { padding: 1.2rem 2rem; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .about-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .about-visual { max-width: 400px; margin: 0 auto; }
+    .experience-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+    .experience-grid .exp-cell:first-child { grid-row: auto; grid-column: 1 / 3; height: 280px; }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    nav { padding: 1rem 1.5rem; }
+    section { padding: 5rem 0; }
+    .container { padding: 0 1.5rem; }
+    .hero-title { font-size: 3.3rem; }
+    .ambiance-grid { grid-template-columns: 1fr 1fr; height: auto; }
+    .ambiance-cell { height: 180px; }
+    .menu-grid { grid-template-columns: 1fr; }
+    .menu-item:nth-child(odd) { border-right: none; padding-right: 0; }
+    .menu-item:nth-child(even) { padding-left: 0; }
+    .menu-special { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .form-row { grid-template-columns: 1fr; }
+    .reviews-grid { grid-template-columns: 1fr; }
+    .experience-grid { grid-template-columns: 1fr; }
+    .experience-grid .exp-cell:first-child { grid-column: auto; }
+    .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+    .about-values { grid-template-columns: 1fr; }
+    .hero-rating { flex-direction: column; gap: 0.5rem; font-size: 0.7rem; }
+    .rating-divider { display: none; }
+    .menu-tabs { overflow-x: auto; }
+    .menu-tab { white-space: nowrap; }
+  }
+  @media (max-width: 480px) {
+    .hero-title { font-size: 2.6rem; }
+    .section-title { font-size: 2.2rem; }
+    .ambiance-grid { grid-template-columns: 1fr; height: auto; }
+    .ambiance-cell { height: 160px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="closeMobileMenu()">✕</button>
+  <a href="#home" onclick="closeMobileMenu()">Home</a>
+  <a href="#menu" onclick="closeMobileMenu()">Menu</a>
+  <a href="#about" onclick="closeMobileMenu()">Our Story</a>
+  <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+  <a href="#reviews" onclick="closeMobileMenu()">Reviews</a>
+  <a href="#contact" onclick="closeMobileMenu()">Reserve</a>
+</div>
+
+<!-- Navigation -->
+<nav id="navbar">
+  <a href="#home" class="nav-logo">Initium <span>& More</span></a>
+  <ul class="nav-links">
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#contact">Location</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Reserve a Table</a>
+  <button class="hamburger" onclick="openMobileMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Hero -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Hinjawadi, Pune · Est. 2023</div>
+    <h1 class="hero-title">Every Visit<br>A <em>New</em><br>Beginning</h1>
+    <p class="hero-desc" style="margin-top: 2rem;">Initium Cafe & More is Pune's most celebrated dining destination — crafted for those who refuse to settle for ordinary. Romantic settings, chef-curated menus, and an ambiance that turns every moment into a memory.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore the Menu</a>
+      <a href="#contact" class="btn-outline">Book Your Table</a>
+    </div>
+  </div>
+  <div class="hero-rating">
+    <span class="stars">★★★★★</span>
+    <span>Rated 4.9 on Google</span>
+    <div class="rating-divider"></div>
+    <span>Budget Friendly Luxury</span>
+    <div class="rating-divider"></div>
+    <span>Best Ambiance in Pune</span>
+  </div>
+</section>
+
+<!-- Ambiance Strip -->
+<div id="ambiance">
+  <div class="ambiance-grid">
+    <div class="ambiance-cell ambiance-cell-1">
+      <div class="ambiance-cell-bg"></div>
+      <div class="ambiance-icon">🕯️</div>
+      <div class="ambiance-label">
+        <h3>Candlelit Evenings</h3>
+        <p>Romantic Dining</p>
+      </div>
+    </div>
+    <div class="ambiance-cell ambiance-cell-2">
+      <div class="ambiance-cell-bg"></div>
+      <div class="ambiance-icon">☕</div>
+      <div class="ambiance-label">
+        <h3>Artisan Brews</h3>
+        <p>Specialty Coffee</p>
+      </div>
+    </div>
+    <div class="ambiance-cell ambiance-cell-3">
+      <div class="ambiance-cell-bg"></div>
+      <div class="ambiance-icon">🍽️</div>
+      <div class="ambiance-label">
+        <h3>Chef's Table</h3>
+        <p>Curated Cuisine</p>
+      </div>
+    </div>
+    <div class="ambiance-cell ambiance-cell-4">
+      <div class="ambiance-cell-bg"></div>
+      <div class="ambiance-icon">🌿</div>
+      <div class="ambiance-label">
+        <h3>Garden Seating</h3>
+        <p>Outdoor Escape</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Menu -->
+<section id="menu">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-eyebrow">Curated for You</div>
+      <h2 class="section-title">Our <em>Menu</em></h2>
+      <p class="section-lead">Every dish is crafted with intention — sourced locally, prepared authentically, and plated beautifully. Food that's worth your time and every rupee.</p>
+    </div>
+
+    <div class="menu-tabs" style="margin-top: 3rem;">
+      <button class="menu-tab active" onclick="switchTab(event, 'food')">All Day Dining</button>
+      <button class="menu-tab" onclick="switchTab(event, 'chef')">Chef's Specials</button>
+      <button class="menu-tab" onclick="switchTab(event, 'beverages')">Beverages</button>
+      <button class="menu-tab" onclick="switchTab(event, 'desserts')">Desserts</button>
+    </div>
+
+    <!-- All Day Dining -->
+    <div class="menu-panel active" id="panel-food">
+      <div class="menu-grid">
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <div class="menu-badge">Bestseller</div>
+            <h4>Initium Signature Pasta</h4>
+            <p>Handmade pappardelle in a slow-cooked truffle cream, topped with parmesan crisps and herb oil</p>
+          </div>
+          <div class="menu-price">₹349</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <div class="menu-badge">Must Try</div>
+            <h4>Garden Harvest Bowl</h4>
+            <p>Seasonal greens, roasted sweet potato, feta, seeds & tahini lemon drizzle</p>
+          </div>
+          <div class="menu-price">₹279</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <h4>Loaded Classic Burger</h4>
+            <p>Brioche bun, smashed patty, caramelised onion, aged cheddar, house-made sauces</p>
+          </div>
+          <div class="menu-price">₹319</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <h4>Paneer Tikka Toast</h4>
+            <p>Chargrilled paneer on toasted sourdough, mint chutney, pickled onion, micro greens</p>
+          </div>
+          <div class="menu-price">₹249</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <div class="menu-badge">New</div>
+            <h4>Truffle Mushroom Risotto</h4>
+            <p>Arborio rice, wild mushroom medley, truffle oil, aged parmesan, fresh thyme</p>
+          </div>
+          <div class="menu-price">₹399</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <h4>Mezze Platter for Two</h4>
+            <p>Hummus, babaganoush, falafel, pita chips, olives & house-pickled veggies</p>
+          </div>
+          <div class="menu-price">₹449</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <h4>Avocado & Egg Toast</h4>
+            <p>Multigrain toast, whipped avocado, poached egg, chilli flakes, lemon zest</p>
+          </div>
+          <div class="menu-price">₹219</div>
+        </div>
+        <div class="menu-item fade-up">
+          <div class="menu-item-info">
+            <h4>Spicy Korean Tacos</h4>
+            <p>Soft corn tortilla, gochujang glazed mushroom, slaw, sriracha mayo, sesame</p>
+          </div>
+          <div class="menu-price">₹299</div>
+        </div>
+      </div>
+
+      <div class="menu-special fade-up">
+        <div>
+          <div class="menu-special-badge">Daily Special</div>
+          <h3>Chef's Table of the Day</h3>
+          <p>Every day, our chef crafts a limited-edition dish using the freshest seasonal produce. Ask your server for today's creation — it changes daily and it always sells out. A true Initium original experience.</p>
+        </div>
+        <div>
+          <a href="#contact" class="btn-primary" style="display: inline-block;">Ask Today's Special</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chef's Specials -->
+    <div class="menu-panel" id="panel-chef">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Signature</div>
+            <h4>Saffron Broth Ramen</h4>
+            <p>Chef's original — 12-hour saffron broth, hand-pulled noodles, slow-cooked egg, nori</p>
+          </div>
+          <div class="menu-price">₹449</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Limited</div>
+            <h4>Smoked Aubergine Steak</h4>
+            <p>Cold-smoked aubergine, romesco sauce, crispy capers, herb oil & microgreens</p>
+          </div>
+          <div class="menu-price">₹379</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Initium 3-Course Set</h4>
+            <p>Soup of the day + Chef's main course + Dessert — the full Initium experience</p>
+          </div>
+          <div class="menu-price">₹799</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Popular</div>
+            <h4>Date Night Platter</h4>
+            <p>Curated sharing board — bruschetta, dips, sliders, sweet bites — for two</p>
+          </div>
+          <div class="menu-price">₹699</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Beverages -->
+    <div class="menu-panel" id="panel-beverages">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">House Favourite</div>
+            <h4>Initium Cold Brew</h4>
+            <p>24-hour cold-brewed Colombian coffee, subtle dark chocolate notes, served over crystal ice</p>
+          </div>
+          <div class="menu-price">₹179</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Rose & Vanilla Latte</h4>
+            <p>Double shot espresso, house-made rose syrup, vanilla cold foam on top</p>
+          </div>
+          <div class="menu-price">₹199</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Watermelon Mint Cooler</h4>
+            <p>Fresh watermelon, mint, lime, sparkling water — summer in a glass</p>
+          </div>
+          <div class="menu-price">₹149</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Signature</div>
+            <h4>Initium Sunrise Smoothie</h4>
+            <p>Mango, passionfruit, coconut milk, chia seeds, turmeric — beauty in a glass</p>
+          </div>
+          <div class="menu-price">₹189</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Masala Chai Latte</h4>
+            <p>Authentic spiced chai, steamed whole milk, cinnamon dusting — comfort redefined</p>
+          </div>
+          <div class="menu-price">₹129</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Matcha Ceremonial Latte</h4>
+            <p>Ceremonial grade matcha whisked with oat milk, light honey, hint of vanilla</p>
+          </div>
+          <div class="menu-price">₹219</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="menu-panel" id="panel-desserts">
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Must Have</div>
+            <h4>Dark Chocolate Lava Cake</h4>
+            <p>Warm valrhona chocolate cake, molten centre, vanilla bean ice cream, gold dust</p>
+          </div>
+          <div class="menu-price">₹249</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Mango Panna Cotta</h4>
+            <p>Italian set cream, alphonso mango coulis, fresh mango brulee on top</p>
+          </div>
+          <div class="menu-price">₹199</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <div class="menu-badge">Couple's Pick</div>
+            <h4>Sharing Dessert Board</h4>
+            <p>Brownie bites, macarons, fruit skewers, chocolate fondue — made to share</p>
+          </div>
+          <div class="menu-price">₹449</div>
+        </div>
+        <div class="menu-item">
+          <div class="menu-item-info">
+            <h4>Classic Tiramisu</h4>
+            <p>Savoiardi ladyfingers soaked in espresso, mascarpone cream, cocoa dusting</p>
+          </div>
+          <div class="menu-price">₹219</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual fade-up">
+        <div class="about-visual-frame">
+          <div class="about-visual-inner">
+            <div class="about-monogram">I</div>
+            <div class="about-year">Est. Hinjawadi · Pune</div>
+          </div>
+        </div>
+        <div class="about-stat-card">
+          <span class="about-stat-num">4.9</span>
+          <span class="about-stat-label">Google Rating</span>
+        </div>
+      </div>
+      <div class="about-content fade-up">
+        <div class="section-eyebrow">Our Story</div>
+        <h2 class="section-title">Where <em>Every</em> Story Begins</h2>
+
+        <p><strong>Initium</strong> — Latin for "beginning." We chose this name because we believe great things start here: first dates, anniversary dinners, study sessions that turn into friendships, and post-campus celebrations that become memories for life.</p>
+
+        <p>Born in the heart of <strong>Hinjawadi, Pune's</strong> most vibrant tech and student hub, Initium Cafe & More was founded with one obsession: to create a space where luxury doesn't come with a premium price tag. Where the food is <strong>authentic, the ambiance is cinematic</strong>, and every visit feels genuinely special.</p>
+
+        <p>We started small — a vision, a kitchen, and a belief that Pune deserved something different. No shortcuts on ingredients. No compromises on experience. Real flavours, <strong>real warmth</strong>, real care.</p>
+
+        <div class="about-values">
+          <div class="about-value">
+            <h4>Authenticity</h4>
+            <p>Every recipe is original. No shortcuts, no box ingredients — just honest, crafted food.</p>
+          </div>
+          <div class="about-value">
+            <h4>Ambiance First</h4>
+            <p>We design every corner for romance, calm, and that "this is exactly what I needed" feeling.</p>
+          </div>
+          <div class="about-value">
+            <h4>Community Rooted</h4>
+            <p>Built for Hinjawadi's students, tech professionals, couples and families alike.</p>
+          </div>
+          <div class="about-value">
+            <h4>Worth Every Rupee</h4>
+            <p>Luxury that's budget-friendly. Premium experience, accessible pricing — always.</p>
+          </div>
+        </div>
+
+        <div class="about-future">
+          <h4>Our Vision for Tomorrow</h4>
+          <p>We're growing — but slowly, intentionally. Initium plans to expand its chef's table experience, introduce weekend live acoustic sessions, and launch curated tasting events for food lovers across Pune. The dream? To be the place every Punekar points to when someone asks: <em>"Where should we go for something truly special?"</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience / Gallery -->
+<section id="experience">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-eyebrow">Why Initium</div>
+      <h2 class="section-title">The <em>Experience</em></h2>
+      <p class="section-lead">It's not just a cafe. It's a feeling. Every detail — from the lighting to the plating — is designed to make you stay longer, talk deeper, and come back sooner.</p>
+    </div>
+    <div class="experience-grid">
+      <div class="exp-cell">
+        <div class="exp-cell-bg">🕯️</div>
+        <div class="exp-cell-label">
+          <span>Signature Setting</span>
+          <h3>Romantic Candlelit Ambiance</h3>
+        </div>
+      </div>
+      <div class="exp-cell">
+        <div class="exp-cell-bg">🎵</div>
+        <div class="exp-cell-label">
+          <span>Curated Soundtrack</span>
+          <h3>Lo-Fi & Live Music</h3>
+        </div>
+      </div>
+      <div class="exp-cell">
+        <div class="exp-cell-bg">📸</div>
+        <div class="exp-cell-label">
+          <span>Gram-Worthy Spaces</span>
+          <h3>Every Corner is a Shot</h3>
+        </div>
+      </div>
+      <div class="exp-cell">
+        <div class="exp-cell-bg">💑</div>
+        <div class="exp-cell-label">
+          <span>For Couples</span>
+          <h3>Private Nook Seating</h3>
+        </div>
+      </div>
+      <div class="exp-cell">
+        <div class="exp-cell-bg">🎓</div>
+        <div class="exp-cell-label">
+          <span>Student Friendly</span>
+          <h3>Fast Wi-Fi & Study Zones</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews">
+  <div class="container">
+    <div class="fade-up" style="text-align: center; max-width: 600px; margin: 0 auto 4rem;">
+      <div class="section-eyebrow" style="justify-content: center;">What People Say</div>
+      <h2 class="section-title">Real <em>Voices</em></h2>
+      <p class="section-lead" style="margin: 0 auto;">Real customers, real experiences. Rated 4.9 stars on Google — because every visit speaks for itself.</p>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"The food is amazing here. The ambiance is something else — I felt like I was in a different city. Must visit for anyone in Pune."</p>
+        <div class="review-author">Google Review · Hinjawadi</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Great food and ambiance. Best for student crowd — budget friendly and genuinely feels luxurious. Came for a date and we stayed for 3 hours."</p>
+        <div class="review-author">Google Review · Pimpri-Chinchwad</div>
+      </div>
+      <div class="review-card fade-up">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"Beautiful place with tasty food. The coffee is phenomenal. Every single dish we ordered was better than the last. This is Pune's hidden gem."</p>
+        <div class="review-author">Google Review · Wakad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="fade-up">
+      <div class="section-eyebrow">Come Find Us</div>
+      <h2 class="section-title">Visit & <em>Reserve</em></h2>
+    </div>
+    <div class="contact-grid" style="margin-top: 4rem;">
+      <div class="contact-info">
+        <div class="contact-block fade-up">
+          <div class="contact-block-label">Address</div>
+          <h3>Initium Cafe & More</h3>
+          <p>HPRR+J4M, Hinjawadi</p>
+          <p>Pimpri-Chinchwad, Pune</p>
+          <p>Maharashtra 411057</p>
+          <a href="https://maps.google.com/?q=Initium+cafe+Hinjawadi+Pune" target="_blank" style="margin-top: 0.5rem; color: var(--gold);">Open in Google Maps →</a>
+        </div>
+        <div class="contact-block fade-up">
+          <div class="contact-block-label">Phone & Contact</div>
+          <h3>Call or WhatsApp</h3>
+          <a href="tel:+918788006520">+91 87880 06520</a>
+          <a href="https://wa.me/918788006520" target="_blank" style="color: var(--gold); margin-top: 0.3rem;">WhatsApp us →</a>
+        </div>
+        <div class="contact-block fade-up">
+          <div class="contact-block-label">Opening Hours</div>
+          <div class="hours-grid">
+            <div class="hours-row"><span>Mon – Fri</span><span>10 AM – 10 PM</span></div>
+            <div class="hours-row"><span>Saturday</span><span>9 AM – 11 PM</span></div>
+            <div class="hours-row"><span>Sunday</span><span>9 AM – 10 PM</span></div>
+          </div>
+        </div>
+        <div class="contact-block fade-up">
+          <div class="contact-block-label">Follow Our Story</div>
+          <div class="social-links">
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Zomato</a>
+            <a href="#" class="social-link">Swiggy</a>
+            <a href="#" class="social-link">Google</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="booking-form fade-up">
+        <h3>Reserve Your Table</h3>
+        <p>Book ahead and we'll make sure your table — and your experience — is perfectly ready.</p>
+        <div id="bookingFormContainer">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="Full name" id="bookName">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone / WhatsApp</label>
+              <input type="tel" class="form-input" placeholder="+91 XXXXX XXXXX" id="bookPhone">
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Date</label>
+              <input type="date" class="form-input" id="bookDate">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Time</label>
+              <select class="form-select" id="bookTime">
+                <option value="">Select time</option>
+                <option>10:00 AM</option>
+                <option>11:00 AM</option>
+                <option>12:00 PM</option>
+                <option>1:00 PM</option>
+                <option>2:00 PM</option>
+                <option>3:00 PM</option>
+                <option>5:00 PM</option>
+                <option>6:00 PM</option>
+                <option>7:00 PM</option>
+                <option>8:00 PM</option>
+                <option>9:00 PM</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Party Size</label>
+              <select class="form-select" id="bookSize">
+                <option value="">Number of guests</option>
+                <option>1 guest</option>
+                <option>2 guests – Couple</option>
+                <option>3–4 guests</option>
+                <option>5–6 guests</option>
+                <option>7+ guests – Group</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Occasion</label>
+              <select class="form-select" id="bookOccasion">
+                <option value="">Select occasion</option>
+                <option>Casual Dining</option>
+                <option>Date Night</option>
+                <option>Anniversary</option>
+                <option>Birthday Celebration</option>
+                <option>Honeymoon / Newlywed</option>
+                <option>Work / Study Session</option>
+                <option>Group Outing</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Special Requests</label>
+            <textarea class="form-textarea" placeholder="Any dietary needs, decorations, or special arrangements?" id="bookNote"></textarea>
+          </div>
+          <button class="form-submit" onclick="submitBooking()">Confirm Reservation →</button>
+        </div>
+        <div class="form-success" id="bookingSuccess">
+          <h4>Your table awaits.</h4>
+          <p>We've received your reservation request. Our team will confirm via WhatsApp or call within 30 minutes. We look forward to welcoming you.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="map-embed fade-up">
+      <div class="map-header">
+        <h4>📍 Initium Cafe & More, Hinjawadi, Pune</h4>
+        <a href="https://maps.google.com/?q=Initium+cafe+Hinjawadi+Pune" target="_blank">Get Directions →</a>
+      </div>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.5!2d73.74029569999999!3d18.5915964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bb001e8e1d5f%3A0x57c004b82d7ae2c0!2sINITIUM+cafe+and+more!5e0!3m2!1sen!2sin!4v1"
+        width="100%" height="300" style="border:0; display:block;" allowfullscreen="" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="footer-logo">Initium <em>& More</em></span>
+        <p class="footer-tagline">Pune's most loved cafe for romantic dining, authentic food, and moments that matter. Every visit is a new beginning.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navigate</h5>
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#about">Our Story</a>
+        <a href="#experience">Experience</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Visit Us</h5>
+        <p>HPRR+J4M, Hinjawadi</p>
+        <p>Pimpri-Chinchwad, Pune</p>
+        <p>Maharashtra 411057</p>
+        <a href="tel:+918788006520">+91 87880 06520</a>
+      </div>
+      <div class="footer-col">
+        <h5>Find Us</h5>
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">Zomato</a>
+        <a href="#">Swiggy</a>
+        <a href="#">Google Maps</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2024 Initium Cafe & More · Hinjawadi, Pune · All rights reserved</p>
+      <p class="footer-seo">Best cafe in Pune · Best food Hinjawadi · Romantic cafe Pune · Luxury dining Pimpri-Chinchwad</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('navbar');
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  function openMobileMenu() { document.getElementById('mobileMenu').classList.add('open'); }
+  function closeMobileMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+  // Menu tabs
+  function switchTab(e, panelId) {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    e.target.classList.add('active');
+    document.getElementById('panel-' + panelId).classList.add('active');
+  }
+
+  // Booking form
+  function submitBooking() {
+    const name = document.getElementById('bookName').value.trim();
+    const phone = document.getElementById('bookPhone').value.trim();
+    const date = document.getElementById('bookDate').value;
+    const time = document.getElementById('bookTime').value;
+    if (!name || !phone || !date || !time) {
+      alert('Please fill in your name, phone, date and time to proceed.');
+      return;
+    }
+    document.getElementById('bookingFormContainer').style.display = 'none';
+    document.getElementById('bookingSuccess').style.display = 'block';
+  }
+
+  // Scroll fade-up observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Set min date to today
+  const dateInput = document.getElementById('bookDate');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+</script>
+</body>
+</html>

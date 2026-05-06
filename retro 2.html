@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Initium Café — Where Every First Begins | Hinjawadi, Pune</title>
+<meta name="description" content="Initium Café in Hinjawadi, Pune — a luxurious yet casual dining experience for couples, college students, and Gen Z food lovers. Best ambiance, romantic settings, and authentic flavors in Pune.">
+<meta name="keywords" content="best cafe in Pune, romantic cafe Pune, cafe Hinjawadi, best food Pune, luxury dining Pune, cafe for couples Pune, Initium cafe, student cafe Pune, best ambiance cafe Pune">
+<meta property="og:title" content="Initium Café — Where Every First Begins">
+<meta property="og:description" content="Luxurious casual dining in Hinjawadi, Pune. Romantic settings, authentic food, unforgettable experiences.">
+<meta property="og:type" content="restaurant">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F8F3EC;
+    --cream-dark: #EDE4D4;
+    --espresso: #1A0F00;
+    --espresso-mid: #2C1A06;
+    --gold: #B8892A;
+    --gold-light: #D4A84B;
+    --gold-pale: #F0DCA8;
+    --rose: #C4725A;
+    --sage: #7A8B6F;
+    --text-main: #1A0F00;
+    --text-muted: #6B5840;
+    --text-light: #9E8060;
+    --nav-h: 76px;
+    --font-display: 'Cormorant Garamond', serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-accent: 'Playfair Display', serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--font-body); background: var(--cream); color: var(--text-main); overflow-x: hidden; }
+
+  /* ── NAV ─────────────────────────────────────────────── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    height: var(--nav-h);
+    background: rgba(248, 243, 236, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(184,137,42,0.15);
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0 5vw;
+    transition: box-shadow 0.3s;
+  }
+  nav.scrolled { box-shadow: 0 2px 24px rgba(26,15,0,0.08); }
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.9rem; font-weight: 600; letter-spacing: 0.04em;
+    color: var(--espresso);
+    text-decoration: none;
+  }
+  .nav-logo span { color: var(--gold); }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a {
+    font-family: var(--font-body); font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--text-muted); text-decoration: none;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 1px;
+    background: var(--gold); transform: scaleX(0); transition: transform 0.3s;
+  }
+  .nav-links a:hover { color: var(--espresso); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    background: var(--espresso); color: var(--cream) !important;
+    padding: 0.55rem 1.4rem; border-radius: 2px;
+    letter-spacing: 0.1em !important;
+  }
+  .nav-cta::after { display: none !important; }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--espresso) !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .hamburger span { width: 26px; height: 1.5px; background: var(--espresso); transition: all 0.3s; display: block; }
+
+  /* ── HERO ─────────────────────────────────────────────── */
+  #home {
+    min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    position: relative; overflow: hidden;
+    background: var(--espresso-mid);
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 40%, rgba(184,137,42,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 50% 80% at 20% 70%, rgba(196,114,90,0.12) 0%, transparent 60%),
+      linear-gradient(160deg, #1A0F00 0%, #2C1A06 40%, #1A0F00 100%);
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.04;
+    background-image:
+      repeating-linear-gradient(45deg, var(--gold) 0, var(--gold) 1px, transparent 0, transparent 50%);
+    background-size: 32px 32px;
+  }
+  .hero-content {
+    position: relative; z-index: 2; text-align: center;
+    padding: calc(var(--nav-h) + 2rem) 5vw 4rem;
+    max-width: 900px;
+    animation: fadeUp 1.2s ease both;
+  }
+  .hero-eyebrow {
+    font-family: var(--font-body); font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: center; gap: 1rem;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; width: 40px; height: 1px; background: var(--gold); opacity: 0.5;
+  }
+  .hero-title {
+    font-family: var(--font-display); font-size: clamp(3.5rem, 8vw, 7rem);
+    font-weight: 300; line-height: 1.05; color: var(--cream);
+    margin-bottom: 0.3rem; letter-spacing: -0.01em;
+  }
+  .hero-title em { font-style: italic; color: var(--gold-light); }
+  .hero-subtitle {
+    font-family: var(--font-display); font-size: clamp(1rem, 2.5vw, 1.4rem);
+    font-weight: 300; font-style: italic; color: rgba(248,243,236,0.55);
+    margin-bottom: 2.5rem; letter-spacing: 0.06em;
+  }
+  .hero-desc {
+    font-size: 1rem; color: rgba(248,243,236,0.7); max-width: 540px;
+    margin: 0 auto 3rem; line-height: 1.8; font-weight: 300;
+  }
+  .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold); color: var(--espresso);
+    padding: 0.9rem 2.2rem; font-size: 0.82rem; font-weight: 500;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px;
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    border: 1px solid rgba(248,243,236,0.35); color: var(--cream);
+    padding: 0.9rem 2.2rem; font-size: 0.82rem; font-weight: 400;
+    letter-spacing: 0.15em; text-transform: uppercase;
+    text-decoration: none; border-radius: 2px;
+    transition: all 0.3s; display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    animation: bounce 2.5s ease-in-out infinite;
+  }
+  .hero-scroll span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(248,243,236,0.4); }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); }
+
+  /* ── SECTIONS ─────────────────────────────────────────── */
+  section { padding: 7rem 5vw; }
+  .section-label {
+    font-family: var(--font-body); font-size: 0.7rem; font-weight: 500;
+    letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold);
+    display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.2rem;
+  }
+  .section-label::before { content: ''; width: 30px; height: 1px; background: var(--gold); }
+  .section-title {
+    font-family: var(--font-display); font-size: clamp(2.4rem, 5vw, 4rem);
+    font-weight: 300; line-height: 1.1; color: var(--espresso);
+    margin-bottom: 1.2rem;
+  }
+  .section-title em { font-style: italic; color: var(--gold); }
+  .section-body { font-size: 1rem; color: var(--text-muted); line-height: 1.85; max-width: 540px; font-weight: 300; }
+
+  /* ── VIBE STRIP (below hero) ─────────────────────────── */
+  .vibe-strip {
+    background: var(--espresso); padding: 1.6rem 5vw;
+    display: flex; justify-content: center; gap: clamp(2rem,5vw,5rem); flex-wrap: wrap;
+  }
+  .vibe-item {
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; color: rgba(248,243,236,0.55);
+  }
+  .vibe-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+
+  /* ── AMBIANCE (grid showcase) ─────────────────────────── */
+  #ambiance { background: var(--cream); }
+  .ambiance-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 280px 280px;
+    gap: 12px; margin-top: 4rem;
+  }
+  .amb-cell {
+    border-radius: 4px; overflow: hidden; position: relative;
+    background: var(--espresso-mid);
+  }
+  .amb-cell:first-child { grid-row: span 2; }
+  .amb-cell:last-child { grid-column: span 2; }
+  .amb-inner {
+    width: 100%; height: 100%;
+    display: flex; align-items: flex-end; padding: 1.5rem;
+    position: relative; overflow: hidden;
+  }
+  .amb-bg {
+    position: absolute; inset: 0;
+    transition: transform 0.6s ease;
+  }
+  .amb-cell:hover .amb-bg { transform: scale(1.04); }
+  .amb-bg-1 { background: linear-gradient(135deg, #1A0F00 0%, #3D2409 50%, #2C1A06 100%); }
+  .amb-bg-2 { background: linear-gradient(120deg, #261508 0%, #4A2D0E 100%); }
+  .amb-bg-3 { background: linear-gradient(150deg, #1E1208 0%, #382010 100%); }
+  .amb-bg-4 { background: linear-gradient(130deg, #120900 0%, #2E1B08 100%); }
+  /* Decorative overlays on each cell */
+  .amb-bg-1::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 60% 40%, rgba(184,137,42,0.25), transparent 60%); }
+  .amb-bg-2::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 30% 60%, rgba(196,114,90,0.2), transparent 60%); }
+  .amb-bg-3::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 70% 30%, rgba(122,139,111,0.2), transparent 60%); }
+  .amb-bg-4::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 40% 50%, rgba(184,137,42,0.15), transparent 60%); }
+  /* Candle / pattern art inside cells */
+  .amb-art { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+  .amb-caption { position: relative; z-index: 2; }
+  .amb-caption h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--cream); margin-bottom: 0.3rem; }
+  .amb-caption p { font-size: 0.78rem; color: rgba(248,243,236,0.55); letter-spacing: 0.08em; }
+
+  /* ── MENU ─────────────────────────────────────────────── */
+  #menu { background: var(--espresso-mid); }
+  #menu .section-title { color: var(--cream); }
+  #menu .section-body { color: rgba(248,243,236,0.6); }
+  #menu .section-label { color: var(--gold); }
+  .menu-tabs {
+    display: flex; gap: 0; margin: 3rem 0 2.5rem;
+    border-bottom: 1px solid rgba(184,137,42,0.2);
+    overflow-x: auto; -webkit-overflow-scrolling: touch;
+  }
+  .menu-tab {
+    font-family: var(--font-body); font-size: 0.78rem; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase;
+    color: rgba(248,243,236,0.45); background: none; border: none;
+    padding: 0.7rem 1.5rem; cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    transition: all 0.25s; white-space: nowrap;
+  }
+  .menu-tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .menu-tab:hover { color: rgba(248,243,236,0.8); }
+  .menu-panel { display: none; }
+  .menu-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5px; }
+  .menu-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(184,137,42,0.1);
+    padding: 1.8rem; position: relative; overflow: hidden;
+    transition: background 0.3s;
+  }
+  .menu-card:hover { background: rgba(184,137,42,0.06); }
+  .menu-card.featured { border-color: rgba(184,137,42,0.3); }
+  .menu-badge {
+    position: absolute; top: 1.2rem; right: 1.2rem;
+    font-size: 0.6rem; font-weight: 500; letter-spacing: 0.12em;
+    text-transform: uppercase; padding: 0.25rem 0.6rem;
+    background: var(--gold); color: var(--espresso); border-radius: 2px;
+  }
+  .menu-card h3 { font-family: var(--font-display); font-size: 1.35rem; font-weight: 400; color: var(--cream); margin-bottom: 0.4rem; }
+  .menu-card .desc { font-size: 0.85rem; color: rgba(248,243,236,0.5); line-height: 1.7; margin-bottom: 1.2rem; font-weight: 300; }
+  .menu-footer { display: flex; align-items: center; justify-content: space-between; }
+  .menu-price { font-family: var(--font-display); font-size: 1.5rem; font-weight: 300; color: var(--gold); }
+  .menu-tags { display: flex; gap: 0.4rem; }
+  .tag {
+    font-size: 0.6rem; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.2rem 0.5rem; border: 1px solid rgba(184,137,42,0.3);
+    color: rgba(184,137,42,0.7); border-radius: 2px;
+  }
+  .menu-divider {
+    grid-column: 1 / -1; padding: 1.5rem 0 0.5rem;
+    font-family: var(--font-display); font-size: 1.1rem; font-style: italic;
+    color: rgba(184,137,42,0.5); border-top: 1px solid rgba(184,137,42,0.1); margin-top: 0.5rem;
+  }
+
+  /* ── SPECIALS ─────────────────────────────────────────── */
+  #specials { background: var(--cream-dark); }
+  .specials-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; margin-top: 3rem; }
+  .special-visual {
+    position: relative; aspect-ratio: 4/5;
+    background: linear-gradient(145deg, #1A0F00, #3D2409);
+    border-radius: 4px; overflow: hidden;
+  }
+  .special-visual::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 50% 40%, rgba(184,137,42,0.3), transparent 65%);
+  }
+  .special-plate {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .plate-circle {
+    width: 200px; height: 200px; border-radius: 50%;
+    border: 1px solid rgba(184,137,42,0.3);
+    display: flex; align-items: center; justify-content: center;
+    position: relative;
+  }
+  .plate-circle::before {
+    content: ''; position: absolute; inset: 10px; border-radius: 50%;
+    border: 1px dashed rgba(184,137,42,0.2);
+  }
+  .plate-inner {
+    width: 130px; height: 130px; border-radius: 50%;
+    background: rgba(184,137,42,0.08);
+    border: 1px solid rgba(184,137,42,0.2);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display); font-size: 3.5rem; color: var(--gold-pale);
+  }
+  .special-tag-float {
+    position: absolute; bottom: 2rem; right: -1.5rem;
+    background: var(--gold); color: var(--espresso);
+    padding: 0.8rem 1.2rem; border-radius: 2px;
+    font-family: var(--font-display); font-size: 0.9rem; font-weight: 600;
+    text-align: center;
+  }
+  .special-tag-float small { display: block; font-size: 0.65rem; font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; }
+  .specials-list { display: flex; flex-direction: column; gap: 2rem; }
+  .special-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+  .special-num {
+    font-family: var(--font-display); font-size: 2.5rem; font-weight: 300;
+    color: var(--gold-pale); line-height: 1; flex-shrink: 0; width: 2.5rem;
+  }
+  .special-info h4 { font-family: var(--font-display); font-size: 1.3rem; font-weight: 400; margin-bottom: 0.3rem; }
+  .special-info p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; font-weight: 300; }
+  .special-price { font-size: 0.9rem; color: var(--gold); margin-top: 0.4rem; font-weight: 500; }
+
+  /* ── ABOUT ────────────────────────────────────────────── */
+  #about { background: var(--cream); }
+  .about-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; margin-top: 1rem; }
+  .about-text-block { }
+  .about-pull {
+    font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 300; font-style: italic; line-height: 1.4;
+    color: var(--espresso); margin-bottom: 2rem;
+    padding-left: 1.5rem; border-left: 2px solid var(--gold);
+  }
+  .about-text p { font-size: 0.95rem; color: var(--text-muted); line-height: 1.9; margin-bottom: 1.2rem; font-weight: 300; }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; margin-top: 3rem;
+  }
+  .stat-box { border-top: 1px solid var(--gold-pale); padding-top: 1.2rem; }
+  .stat-num { font-family: var(--font-display); font-size: 2.8rem; font-weight: 300; color: var(--espresso); line-height: 1; }
+  .stat-label { font-size: 0.78rem; color: var(--text-light); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 0.3rem; }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-main {
+    aspect-ratio: 3/4; background: linear-gradient(145deg, #2C1A06, #1A0F00);
+    border-radius: 4px; overflow: hidden; position: relative;
+  }
+  .about-img-main::after {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 40% 30%, rgba(184,137,42,0.25), transparent 60%);
+  }
+  .about-img-float {
+    position: absolute; bottom: -2rem; left: -2rem;
+    width: 55%; aspect-ratio: 1;
+    background: linear-gradient(135deg, #B8892A, #D4A84B);
+    border-radius: 4px; border: 6px solid var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    overflow: hidden;
+  }
+  .about-float-inner {
+    font-family: var(--font-display); font-size: 3.5rem; font-style: italic;
+    font-weight: 300; color: rgba(26,15,0,0.5);
+  }
+  .about-img-content {
+    position: absolute; inset: 0; z-index: 2;
+    display: flex; align-items: center; justify-content: center;
+    padding: 2rem; text-align: center;
+  }
+  .about-quote-big {
+    font-family: var(--font-display); font-size: 2.5rem; font-style: italic;
+    font-weight: 300; color: rgba(248,243,236,0.7); line-height: 1.3;
+  }
+
+  /* ── EXPERIENCE STRIP ─────────────────────────────────── */
+  #experience { background: var(--espresso); padding: 5rem 5vw; }
+  .exp-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin-top: 3rem; }
+  .exp-cell {
+    padding: 2.5rem 2rem;
+    border: 1px solid rgba(184,137,42,0.1);
+    position: relative; overflow: hidden;
+    transition: background 0.3s;
+  }
+  .exp-cell:hover { background: rgba(184,137,42,0.06); }
+  .exp-icon {
+    width: 48px; height: 48px; margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .exp-cell h3 { font-family: var(--font-display); font-size: 1.4rem; font-weight: 400; color: var(--cream); margin-bottom: 0.8rem; }
+  .exp-cell p { font-size: 0.88rem; color: rgba(248,243,236,0.5); line-height: 1.8; font-weight: 300; }
+  .exp-num {
+    position: absolute; top: 1.5rem; right: 1.5rem;
+    font-family: var(--font-display); font-size: 4rem; font-weight: 300;
+    color: rgba(184,137,42,0.08); line-height: 1; user-select: none;
+  }
+
+  /* ── CONTACT ──────────────────────────────────────────── */
+  #contact { background: var(--cream-dark); }
+  .contact-wrap { display: grid; grid-template-columns: 1.2fr 1fr; gap: 5rem; margin-top: 3rem; }
+  .contact-info-block { }
+  .contact-row {
+    display: flex; gap: 1.2rem; align-items: flex-start;
+    padding: 1.5rem 0; border-bottom: 1px solid rgba(26,15,0,0.07);
+  }
+  .contact-icon-wrap {
+    width: 44px; height: 44px; border-radius: 2px;
+    background: var(--espresso); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .contact-row h4 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-light); margin-bottom: 0.3rem; }
+  .contact-row p, .contact-row a { font-size: 0.95rem; color: var(--text-main); text-decoration: none; line-height: 1.6; }
+  .contact-row a:hover { color: var(--gold); }
+  .social-row { display: flex; gap: 0.8rem; margin-top: 2rem; }
+  .social-btn {
+    width: 44px; height: 44px; border-radius: 2px;
+    background: var(--espresso); display: flex; align-items: center; justify-content: center;
+    text-decoration: none; transition: background 0.2s;
+  }
+  .social-btn:hover { background: var(--gold); }
+  .booking-box {
+    background: var(--espresso); padding: 2.5rem;
+    border-radius: 4px;
+  }
+  .booking-box h3 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; color: var(--cream); margin-bottom: 0.5rem; }
+  .booking-box p { font-size: 0.88rem; color: rgba(248,243,236,0.55); margin-bottom: 2rem; }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label { display: block; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(248,243,236,0.5); margin-bottom: 0.4rem; }
+  .form-group input, .form-group select, .form-group textarea {
+    width: 100%; padding: 0.75rem 1rem;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(184,137,42,0.2);
+    color: var(--cream); font-family: var(--font-body); font-size: 0.9rem;
+    border-radius: 2px; outline: none; transition: border-color 0.2s;
+  }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--gold); }
+  .form-group select option { background: var(--espresso-mid); }
+  .form-group textarea { resize: none; height: 90px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+  .btn-book {
+    width: 100%; padding: 0.9rem;
+    background: var(--gold); color: var(--espresso);
+    border: none; font-family: var(--font-body); font-size: 0.82rem;
+    font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase;
+    border-radius: 2px; cursor: pointer; margin-top: 0.5rem;
+    transition: background 0.2s;
+  }
+  .btn-book:hover { background: var(--gold-light); }
+  .success-msg { display: none; text-align: center; padding: 1rem; color: var(--gold); font-family: var(--font-display); font-size: 1.1rem; font-style: italic; }
+
+  /* ── MAP ──────────────────────────────────────────────── */
+  #map-section { background: var(--espresso); padding: 4rem 5vw; }
+  .map-inner { display: grid; grid-template-columns: 1fr 2fr; gap: 3rem; align-items: center; }
+  .map-text h3 { font-family: var(--font-display); font-size: 2rem; font-weight: 300; color: var(--cream); margin-bottom: 1rem; }
+  .map-text p { font-size: 0.9rem; color: rgba(248,243,236,0.55); line-height: 1.8; margin-bottom: 1.5rem; }
+  .map-frame { border-radius: 4px; overflow: hidden; height: 320px; background: #1A0F00; border: 1px solid rgba(184,137,42,0.2); }
+  .map-frame iframe { width: 100%; height: 100%; border: none; filter: saturate(0.6) contrast(1.1); }
+
+  /* ── FOOTER ───────────────────────────────────────────── */
+  footer { background: #100800; padding: 4rem 5vw 2rem; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 3rem; }
+  .footer-brand { }
+  .footer-logo { font-family: var(--font-display); font-size: 2rem; font-weight: 600; color: var(--cream); margin-bottom: 0.8rem; }
+  .footer-logo span { color: var(--gold); }
+  .footer-tagline { font-family: var(--font-display); font-style: italic; font-size: 1rem; color: rgba(248,243,236,0.4); margin-bottom: 1.5rem; }
+  .footer-about { font-size: 0.85rem; color: rgba(248,243,236,0.35); line-height: 1.8; }
+  .footer-col h4 { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; }
+  .footer-col li { margin-bottom: 0.6rem; }
+  .footer-col a { font-size: 0.85rem; color: rgba(248,243,236,0.45); text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--cream); }
+  .footer-hours li { font-size: 0.85rem; color: rgba(248,243,236,0.45); }
+  .footer-hours .today { color: var(--gold); }
+  .footer-bottom {
+    padding-top: 2rem; border-top: 1px solid rgba(248,243,236,0.06);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: gap;
+    font-size: 0.78rem; color: rgba(248,243,236,0.25);
+  }
+  .footer-bottom a { color: rgba(248,243,236,0.25); text-decoration: none; }
+  .footer-bottom a:hover { color: var(--gold); }
+  .rating-badge {
+    display: flex; align-items: center; gap: 0.5rem;
+    color: var(--gold); font-family: var(--font-display); font-size: 1.1rem;
+  }
+  .stars { color: var(--gold); letter-spacing: 0.1em; font-size: 0.9rem; }
+
+  /* ── ANIMATIONS ───────────────────────────────────────── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(-8px); }
+  }
+  .reveal {
+    opacity: 0; transform: translateY(25px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.visible { opacity: 1; transform: none; }
+
+  /* ── MOBILE ───────────────────────────────────────────── */
+  @media (max-width: 900px) {
+    .nav-links { display: none; flex-direction: column; position: absolute; top: var(--nav-h); left: 0; right: 0; background: rgba(248,243,236,0.97); padding: 1.5rem 5vw; gap: 0; border-bottom: 1px solid rgba(184,137,42,0.15); }
+    .nav-links.open { display: flex; }
+    .nav-links li { padding: 0.8rem 0; border-bottom: 1px solid rgba(26,15,0,0.05); }
+    .nav-links a { font-size: 0.9rem; }
+    .hamburger { display: flex; }
+    .ambiance-grid { grid-template-columns: 1fr; grid-template-rows: auto; }
+    .amb-cell:first-child, .amb-cell:last-child { grid-row: auto; grid-column: auto; }
+    .amb-inner { min-height: 200px; }
+    .specials-wrap, .about-wrap, .contact-wrap { grid-template-columns: 1fr; gap: 3rem; }
+    .exp-grid { grid-template-columns: 1fr; }
+    .map-inner { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .about-img-float { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+  }
+  @media (max-width: 600px) {
+    section { padding: 5rem 5vw; }
+    .hero-title { font-size: 3rem; }
+  }
+
+  /* ── MOBILE NAV OVERLAY ───────────────────────────────── */
+  .nav-overlay { display: none; position: fixed; inset: 0; background: rgba(26,15,0,0.4); z-index: 999; }
+  .nav-overlay.open { display: block; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="#home" class="nav-logo">INITIUM<span>.</span></a>
+  <ul class="nav-links" id="nav-links">
+    <li><a href="#ambiance">Ambiance</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#specials">Specials</a></li>
+    <li><a href="#about">Our Story</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#contact" class="nav-cta">Reserve</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleNav()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+<div class="nav-overlay" id="nav-overlay" onclick="toggleNav()"></div>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Hinjawadi · Pune · Since 2024</p>
+    <h1 class="hero-title">Where Every<br><em>First Begins</em></h1>
+    <p class="hero-subtitle">A luxurious encounter for the young & the bold</p>
+    <p class="hero-desc">Step into Initium — Pune's most intimate dining destination. Crafted for couples, curated for dreamers, designed for those who demand more from a meal than just food.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="btn-primary">Explore Menu</a>
+      <a href="#contact" class="btn-outline">Reserve a Table</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- VIBE STRIP -->
+<div class="vibe-strip">
+  <div class="vibe-item"><span class="vibe-dot"></span> Romantic Candlelit Ambiance</div>
+  <div class="vibe-item"><span class="vibe-dot"></span> Budget Friendly Luxury</div>
+  <div class="vibe-item"><span class="vibe-dot"></span> Authentic Flavours</div>
+  <div class="vibe-item"><span class="vibe-dot"></span> 4.9★ on Google</div>
+  <div class="vibe-item"><span class="vibe-dot"></span> Perfect for Couples & Students</div>
+</div>
+
+<!-- AMBIANCE -->
+<section id="ambiance">
+  <div class="reveal">
+    <p class="section-label">The Space</p>
+    <h2 class="section-title">An Atmosphere<br><em>Unlike Any Other</em></h2>
+    <p class="section-body">Warm golden light, intimate corners, and a setting that feels like it was designed just for you. Initium is not just a café — it's a feeling.</p>
+  </div>
+  <div class="ambiance-grid reveal">
+    <div class="amb-cell">
+      <div class="amb-inner">
+        <div class="amb-bg amb-bg-1"></div>
+        <div class="amb-art">
+          <svg width="180" height="260" viewBox="0 0 180 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="84" y="60" width="12" height="120" rx="2" fill="rgba(184,137,42,0.4)"/>
+            <ellipse cx="90" cy="56" rx="8" ry="14" fill="rgba(212,168,75,0.6)"/>
+            <ellipse cx="90" cy="50" rx="4" ry="8" fill="rgba(240,220,168,0.8)"/>
+            <circle cx="90" cy="48" r="3" fill="rgba(255,220,100,0.9)"/>
+            <rect x="74" y="180" width="32" height="8" rx="1" fill="rgba(184,137,42,0.2)"/>
+            <circle cx="90" cy="130" r="50" stroke="rgba(184,137,42,0.1)" stroke-width="1" fill="none"/>
+            <circle cx="90" cy="130" r="70" stroke="rgba(184,137,42,0.05)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+        <div class="amb-caption">
+          <h3>Candlelit Evenings</h3>
+          <p>Warm, intimate, unforgettable</p>
+        </div>
+      </div>
+    </div>
+    <div class="amb-cell">
+      <div class="amb-inner">
+        <div class="amb-bg amb-bg-2"></div>
+        <div class="amb-art">
+          <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="50" stroke="rgba(196,114,90,0.3)" stroke-width="1" fill="none"/>
+            <circle cx="60" cy="60" r="35" stroke="rgba(196,114,90,0.2)" stroke-width="1" fill="none"/>
+            <circle cx="60" cy="60" r="20" fill="rgba(196,114,90,0.1)" stroke="rgba(196,114,90,0.3)" stroke-width="1"/>
+            <path d="M60 30 Q65 50 80 60 Q65 70 60 90 Q55 70 40 60 Q55 50 60 30Z" fill="rgba(196,114,90,0.2)"/>
+          </svg>
+        </div>
+        <div class="amb-caption">
+          <h3>Romantic Nooks</h3>
+          <p>Private corners for two</p>
+        </div>
+      </div>
+    </div>
+    <div class="amb-cell">
+      <div class="amb-inner">
+        <div class="amb-bg amb-bg-3"></div>
+        <div class="amb-art">
+          <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 80 Q50 20 80 80" stroke="rgba(122,139,111,0.5)" stroke-width="1.5" fill="none"/>
+            <circle cx="50" cy="48" r="18" stroke="rgba(122,139,111,0.3)" stroke-width="1" fill="rgba(122,139,111,0.08)"/>
+            <circle cx="50" cy="48" r="8" fill="rgba(122,139,111,0.2)"/>
+          </svg>
+        </div>
+        <div class="amb-caption">
+          <h3>Lush Greens</h3>
+          <p>Nature woven into design</p>
+        </div>
+      </div>
+    </div>
+    <div class="amb-cell">
+      <div class="amb-inner" style="min-height:280px;">
+        <div class="amb-bg amb-bg-4"></div>
+        <div class="amb-art">
+          <svg width="260" height="80" viewBox="0 0 260 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="10" y="30" width="240" height="20" rx="2" fill="rgba(184,137,42,0.06)"/>
+            <rect x="10" y="30" width="240" height="1" fill="rgba(184,137,42,0.2)"/>
+            <rect x="10" y="50" width="240" height="1" fill="rgba(184,137,42,0.1)"/>
+            <circle cx="50" cy="40" r="8" fill="rgba(184,137,42,0.15)" stroke="rgba(184,137,42,0.3)" stroke-width="1"/>
+            <circle cx="130" cy="40" r="8" fill="rgba(184,137,42,0.15)" stroke="rgba(184,137,42,0.3)" stroke-width="1"/>
+            <circle cx="210" cy="40" r="8" fill="rgba(184,137,42,0.15)" stroke="rgba(184,137,42,0.3)" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="amb-caption">
+          <h3>Open Social Space</h3>
+          <p>Made for groups, built for memories</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu">
+  <div class="reveal">
+    <p class="section-label">Culinary Journey</p>
+    <h2 class="section-title" style="color:var(--cream)">Our<br><em>Menu</em></h2>
+    <p class="section-body">Every dish tells a story. Fresh ingredients, bold flavours, plated with care — all at a price that respects your wallet.</p>
+  </div>
+  <div class="menu-tabs">
+    <button class="menu-tab active" onclick="switchTab(this,'all')">All Items</button>
+    <button class="menu-tab" onclick="switchTab(this,'breakfast')">Breakfast</button>
+    <button class="menu-tab" onclick="switchTab(this,'mains')">Mains</button>
+    <button class="menu-tab" onclick="switchTab(this,'beverages')">Beverages</button>
+    <button class="menu-tab" onclick="switchTab(this,'desserts')">Desserts</button>
+  </div>
+
+  <!-- ALL -->
+  <div class="menu-panel active" id="tab-all">
+    <div class="menu-card featured">
+      <span class="menu-badge">Chef's Pick</span>
+      <h3>Initium Signature Platter</h3>
+      <p class="desc">A curated selection of the house's finest bites — artisan bruschetta, marinated olives, smoked cheese, and roasted tomato jam on sourdough.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹349</span>
+        <div class="menu-tags"><span class="tag">Veg</span><span class="tag">Shareable</span></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <h3>Truffle Mushroom Risotto</h3>
+      <p class="desc">Arborio rice slow-cooked in a parmesan broth, finished with wild mushrooms and a drizzle of black truffle oil.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹299</span>
+        <div class="menu-tags"><span class="tag">Veg</span></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <h3>Slow Roast Chicken</h3>
+      <p class="desc">Farm-fresh chicken marinated in 12 spices, oven-roasted for 3 hours, served with rosemary potatoes and house gravy.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹349</span>
+        <div class="menu-tags"><span class="tag">Non-Veg</span></div>
+      </div>
+    </div>
+    <div class="menu-divider">Beverages & More</div>
+    <div class="menu-card featured">
+      <span class="menu-badge">Daily Special</span>
+      <h3>Initium Cold Brew</h3>
+      <p class="desc">18-hour steeped single-origin cold brew with a hint of vanilla and oat milk foam. The drink that started it all.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹149</span>
+        <div class="menu-tags"><span class="tag">Signature</span></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <h3>Rose Latte</h3>
+      <p class="desc">Velvety espresso pulled double-strength, topped with house-made rose syrup and steamed whole milk.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹169</span>
+        <div class="menu-tags"><span class="tag">Hot/Cold</span></div>
+      </div>
+    </div>
+    <div class="menu-card">
+      <h3>Dark Chocolate Lava Cake</h3>
+      <p class="desc">Warm Belgian dark chocolate cake with a molten centre, served alongside salted caramel gelato.</p>
+      <div class="menu-footer">
+        <span class="menu-price">₹189</span>
+        <div class="menu-tags"><span class="tag">Dessert</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BREAKFAST -->
+  <div class="menu-panel" id="tab-breakfast">
+    <div class="menu-card featured">
+      <span class="menu-badge">Best Seller</span>
+      <h3>Eggs Benedict on Focaccia</h3>
+      <p class="desc">Two poached eggs nestled on house-baked focaccia, draped in hollandaise with capers and microgreens.</p>
+      <div class="menu-footer"><span class="menu-price">₹229</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>Avocado & Feta Toast</h3>
+      <p class="desc">Thick-cut sourdough, smashed avocado, crumbled Greek feta, chilli flakes, and a squeeze of lemon.</p>
+      <div class="menu-footer"><span class="menu-price">₹199</span><div class="menu-tags"><span class="tag">Veg</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Overnight Oats Bowl</h3>
+      <p class="desc">Chia-infused oats topped with seasonal fruit compote, honey drizzle, and toasted coconut shavings.</p>
+      <div class="menu-footer"><span class="menu-price">₹169</span><div class="menu-tags"><span class="tag">Veg</span><span class="tag">Healthy</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Masala French Toast</h3>
+      <p class="desc">An Indian-fusion twist on the classic — brioche soaked in spiced egg batter, pan-fried golden, dusted with chaat masala.</p>
+      <div class="menu-footer"><span class="menu-price">₹189</span></div>
+    </div>
+  </div>
+
+  <!-- MAINS -->
+  <div class="menu-panel" id="tab-mains">
+    <div class="menu-card featured">
+      <span class="menu-badge">Chef's Pick</span>
+      <h3>Truffle Mushroom Risotto</h3>
+      <p class="desc">Arborio rice slow-cooked in parmesan broth, wild mushrooms, and black truffle oil finish.</p>
+      <div class="menu-footer"><span class="menu-price">₹299</span><div class="menu-tags"><span class="tag">Veg</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Slow Roast Chicken</h3>
+      <p class="desc">12-spice marinated chicken, oven-roasted 3 hours, served with rosemary potatoes and house gravy.</p>
+      <div class="menu-footer"><span class="menu-price">₹349</span><div class="menu-tags"><span class="tag">Non-Veg</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Pesto Pasta Primavera</h3>
+      <p class="desc">Al dente linguine tossed in basil-walnut pesto with seasonal roasted vegetables and pine nuts.</p>
+      <div class="menu-footer"><span class="menu-price">₹249</span><div class="menu-tags"><span class="tag">Veg</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Grilled Paneer Tikka Board</h3>
+      <p class="desc">Smoky tandoor-kissed paneer with mint chutney, pickled onion, and garlic naan fingers.</p>
+      <div class="menu-footer"><span class="menu-price">₹269</span><div class="menu-tags"><span class="tag">Veg</span><span class="tag">Shareable</span></div></div>
+    </div>
+  </div>
+
+  <!-- BEVERAGES -->
+  <div class="menu-panel" id="tab-beverages">
+    <div class="menu-card featured">
+      <span class="menu-badge">Signature</span>
+      <h3>Initium Cold Brew</h3>
+      <p class="desc">18-hour single-origin cold brew with vanilla and oat milk foam.</p>
+      <div class="menu-footer"><span class="menu-price">₹149</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>Rose Latte</h3>
+      <p class="desc">Double espresso with house rose syrup and steamed whole milk. Hot or iced.</p>
+      <div class="menu-footer"><span class="menu-price">₹169</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>Matcha Ceremony</h3>
+      <p class="desc">Ceremonial grade matcha whisked with oat milk, light honey, and a dusting of Himalayan pink salt.</p>
+      <div class="menu-footer"><span class="menu-price">₹179</span><div class="menu-tags"><span class="tag">Healthy</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Berry Burst Mocktail</h3>
+      <p class="desc">Mixed berry shrub, elderflower tonic, fresh mint, and sparkling water over crushed ice.</p>
+      <div class="menu-footer"><span class="menu-price">₹149</span><div class="menu-tags"><span class="tag">Non-Alcoholic</span></div></div>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div class="menu-panel" id="tab-desserts">
+    <div class="menu-card featured">
+      <span class="menu-badge">Must Try</span>
+      <h3>Dark Chocolate Lava Cake</h3>
+      <p class="desc">Belgian dark chocolate cake with molten centre, salted caramel gelato.</p>
+      <div class="menu-footer"><span class="menu-price">₹189</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>Crème Brûlée</h3>
+      <p class="desc">Silky vanilla custard with a perfectly torched caramel crust and fresh berry garnish.</p>
+      <div class="menu-footer"><span class="menu-price">₹179</span></div>
+    </div>
+    <div class="menu-card">
+      <h3>Mango Panna Cotta</h3>
+      <p class="desc">Italian panna cotta with an Alphonso mango coulis — a tribute to Pune's finest fruit.</p>
+      <div class="menu-footer"><span class="menu-price">₹159</span><div class="menu-tags"><span class="tag">Seasonal</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALS -->
+<section id="specials">
+  <div class="specials-wrap">
+    <div class="special-visual reveal">
+      <div class="special-plate">
+        <div class="plate-circle">
+          <div class="plate-inner">✦</div>
+        </div>
+      </div>
+      <div class="special-tag-float">
+        <small>Today's</small>
+        Chef's Table
+      </div>
+    </div>
+    <div class="reveal">
+      <p class="section-label">Daily Specials</p>
+      <h2 class="section-title">Chef's<br><em>Inspiration</em></h2>
+      <p class="section-body" style="margin-bottom:2.5rem;">Our chef crafts a rotating selection of dishes daily — inspired by season, mood, and a relentless hunger to surprise you.</p>
+      <div class="specials-list">
+        <div class="special-item">
+          <span class="special-num">01</span>
+          <div class="special-info">
+            <h4>Monday Mango Brunch Set</h4>
+            <p>Seasonal mango pancake stack, cold brew, and a freshly baked croissant — a complete morning ritual.</p>
+            <p class="special-price">₹349 / person</p>
+          </div>
+        </div>
+        <div class="special-item">
+          <span class="special-num">02</span>
+          <div class="special-info">
+            <h4>Wednesday Wine & Dine Tasting</h4>
+            <p>A 3-course tasting menu featuring experimental small plates, mocktail pairing, and a shared dessert board.</p>
+            <p class="special-price">₹599 / couple</p>
+          </div>
+        </div>
+        <div class="special-item">
+          <span class="special-num">03</span>
+          <div class="special-info">
+            <h4>Weekend Farmer's Bowl</h4>
+            <p>Farm-sourced grain bowl with the freshest local produce, housemade dressings, and poached egg.</p>
+            <p class="special-price">₹229 / person</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-wrap">
+    <div class="about-visual reveal">
+      <div class="about-img-main">
+        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:2rem;text-align:center;z-index:2;">
+          <p class="about-quote-big">"Not just a café — a<br>new chapter every visit."</p>
+        </div>
+      </div>
+      <div class="about-img-float">
+        <span class="about-float-inner">I.</span>
+      </div>
+    </div>
+    <div class="about-text-block reveal">
+      <p class="section-label">Our Story</p>
+      <h2 class="section-title">Born from a<br><em>Bold Idea</em></h2>
+      <blockquote class="about-pull">"Pune deserved a space where luxury and authenticity could coexist — where a student and a newlywed couple could both feel right at home."</blockquote>
+      <div class="about-text">
+        <p>Initium was born from a simple but radical belief: great food and beautiful spaces should not be the exclusive privilege of the few. We opened our doors in Hinjawadi with a singular mission — to create Pune's most honest luxury experience.</p>
+        <p>The name itself is a statement. Initium — Latin for "beginning" — because every great story, every meaningful relationship, every memorable meal starts somewhere. We want to be that somewhere for you.</p>
+        <p>Today, Initium stands as one of Hinjawadi's most beloved destinations, with a 4.9-star rating built not on marketing, but on genuine love from guests who return again and again. We are just getting started.</p>
+        <p><strong style="font-weight:500;color:var(--espresso);">The future:</strong> A second location in Baner, a weekend brunch series, and a chef's table experience for intimate parties of six.</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="stat-num">4.9<span style="font-size:1.5rem">★</span></div>
+          <div class="stat-label">Google Rating</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">68+</div>
+          <div class="stat-label">Verified Reviews</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">1</div>
+          <div class="stat-label">Location in Pune</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-num">∞</div>
+          <div class="stat-label">Memories Made</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="reveal" style="text-align:center;max-width:600px;margin:0 auto 1rem;">
+    <p class="section-label" style="justify-content:center;">Why Initium</p>
+    <h2 class="section-title" style="color:var(--cream);">The Full<br><em>Initium Experience</em></h2>
+  </div>
+  <div class="exp-grid reveal">
+    <div class="exp-cell">
+      <span class="exp-num">01</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="16" cy="16" r="14" stroke="rgba(184,137,42,0.6)" stroke-width="1"/>
+          <path d="M16 6 Q20 12 16 16 Q12 20 16 26" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <h3>Romantic Settings</h3>
+      <p>Candlelit tables, dim golden lighting, curated playlists, and private nooks designed for your most important conversations.</p>
+    </div>
+    <div class="exp-cell">
+      <span class="exp-num">02</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="4" y="10" width="24" height="16" rx="2" stroke="rgba(184,137,42,0.6)" stroke-width="1"/>
+          <path d="M10 10 V8 Q16 4 22 8 V10" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <h3>Authentic Cuisine</h3>
+      <p>No shortcuts, no frozen shortcuts. Every dish is made fresh with locally sourced ingredients and recipes that honour real flavour.</p>
+    </div>
+    <div class="exp-cell">
+      <span class="exp-num">03</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M16 4 L19 12 L28 12 L21 17 L24 26 L16 21 L8 26 L11 17 L4 12 L13 12 Z" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <h3>Worth Every Rupee</h3>
+      <p>Luxury that doesn't cost a fortune. We believe exceptional experiences should be accessible — especially for students and young couples.</p>
+    </div>
+    <div class="exp-cell">
+      <span class="exp-num">04</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <circle cx="12" cy="12" r="7" stroke="rgba(184,137,42,0.6)" stroke-width="1"/>
+          <circle cx="22" cy="20" r="7" stroke="var(--gold)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <h3>Gen Z & Youth Culture</h3>
+      <p>Instagrammable corners, an evolving aesthetic, and a vibe that resonates with the creative, spontaneous spirit of today's youth.</p>
+    </div>
+    <div class="exp-cell">
+      <span class="exp-num">05</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path d="M6 26 Q16 10 26 26" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+          <circle cx="16" cy="12" r="4" stroke="rgba(184,137,42,0.6)" stroke-width="1"/>
+        </svg>
+      </div>
+      <h3>New Every Time</h3>
+      <p>Rotating daily specials, seasonal menus, and live music evenings ensure no two visits are ever the same.</p>
+    </div>
+    <div class="exp-cell">
+      <span class="exp-num">06</span>
+      <div class="exp-icon">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <rect x="6" y="6" width="20" height="20" rx="3" stroke="rgba(184,137,42,0.6)" stroke-width="1"/>
+          <path d="M11 16 L15 20 L21 12" stroke="var(--gold)" stroke-width="1.5" fill="none"/>
+        </svg>
+      </div>
+      <h3>Easy Reservations</h3>
+      <p>Book your table in seconds via call, WhatsApp, or our contact form. Walk-ins always welcome — but tables for two book out fast.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="reveal">
+    <p class="section-label">Find Us</p>
+    <h2 class="section-title">Come In,<br><em>Reserve Your Moment</em></h2>
+  </div>
+  <div class="contact-wrap reveal">
+    <div class="contact-info-block">
+      <div class="contact-row">
+        <div class="contact-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2 C6.7 2 4 4.7 4 8 C4 13 10 18 10 18 S16 13 16 8 C16 4.7 13.3 2 10 2Z" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            <circle cx="10" cy="8" r="2.5" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Address</h4>
+          <p>HPRR+J4M, Hinjawadi Phase 1<br>Pimpri-Chinchwad, Pune — 411057<br>Maharashtra, India</p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 4 Q4 3 5 3 L7 3 Q8 3 8.5 4 L9.5 7 Q9.8 8 9 8.5 L8 9 Q9 12 11 14 L12 13 Q12.5 12.2 13.5 12.5 L16 13.5 Q17 14 17 15 L17 17 Q17 18 16 18 C9 18 2 11 2 4 Q2 3 4 4Z" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Phone / WhatsApp</h4>
+          <a href="tel:+918788006520">+91 87880 06520</a>
+          <p style="font-size:0.78rem;color:var(--text-light);margin-top:0.2rem;">Available 9 AM – 10 PM daily</p>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="5" width="14" height="10" rx="1.5" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            <path d="M3 6 L10 12 L17 6" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Email</h4>
+          <a href="mailto:hello@initiumcafe.in">hello@initiumcafe.in</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="contact-icon-wrap">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="7" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            <path d="M10 6 L10 10 L13 12" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <div>
+          <h4>Hours</h4>
+          <p>Monday – Friday: 8 AM – 10 PM<br>Saturday – Sunday: 8 AM – 11 PM</p>
+        </div>
+      </div>
+      <div style="margin-top:2rem;">
+        <p style="font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-light);margin-bottom:0.8rem;">Follow Us</p>
+        <div class="social-row">
+          <a href="#" class="social-btn" aria-label="Instagram">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <rect x="2" y="2" width="14" height="14" rx="4" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+              <circle cx="9" cy="9" r="3.5" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+              <circle cx="13" cy="5" r="1" fill="var(--gold)"/>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Facebook">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+              <path d="M10.5 6 H9.5 Q8.5 6 8.5 7 V9 H10.5 L10 11 H8.5 V16" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/918788006520" class="social-btn" aria-label="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <circle cx="9" cy="9" r="7" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+              <path d="M6 11 Q6 8 9 7.5 Q12 7 12 9.5 Q12 12 9.5 12 Q8.5 12 7.5 11.5 L5.5 12 Z" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            </svg>
+          </a>
+          <a href="#" class="social-btn" aria-label="Google Maps">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+              <path d="M9 2 Q5 2 5 6 Q5 11 9 16 Q13 11 13 6 Q13 2 9 2Z" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+              <circle cx="9" cy="6.5" r="2" stroke="var(--gold)" stroke-width="1.2" fill="none"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="booking-box reveal">
+      <h3>Reserve a Table</h3>
+      <p>Book your moment — it only takes 30 seconds.</p>
+      <div id="booking-form">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="fname" placeholder="Aryan">
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lname" placeholder="Sharma">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp</label>
+          <input type="tel" id="phone" placeholder="+91 98765 43210">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="bdate">
+          </div>
+          <div class="form-group">
+            <label>Time</label>
+            <input type="time" id="btime">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Party Size</label>
+          <select id="party">
+            <option>1 person</option>
+            <option selected>2 people (Couple)</option>
+            <option>3–4 people</option>
+            <option>5–6 people</option>
+            <option>Large group (7+)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Special Request</label>
+          <textarea id="note" placeholder="Anniversary setup, dietary needs, window seat..."></textarea>
+        </div>
+        <button class="btn-book" onclick="submitBooking()">Confirm Reservation →</button>
+      </div>
+      <div class="success-msg" id="success-msg">
+        ✦ &nbsp; Thank you! Your table is being reserved. We'll confirm shortly on WhatsApp.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP -->
+<div id="map-section">
+  <div class="map-inner">
+    <div>
+      <h3 style="font-family:var(--font-display);font-size:2rem;font-weight:300;color:var(--cream);margin-bottom:1rem;">Find <em style="color:var(--gold);font-style:italic;">Initium</em></h3>
+      <p style="font-size:0.9rem;color:rgba(248,243,236,0.55);line-height:1.8;margin-bottom:1.5rem;">We're nestled in Hinjawadi Phase 1 — the heart of Pune's most vibrant tech-and-culture district. Easily accessible, impossible to forget.</p>
+      <a href="https://maps.google.com/?q=INITIUM+cafe+Hinjawadi+Pune" target="_blank" class="btn-primary" style="display:inline-block;">Open in Google Maps →</a>
+    </div>
+    <div class="map-frame">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.0!2d73.74030!3d18.59160!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bbc0278e1d5f%3A0x57c004b82d7ae2c0!2sINITIUM+cafe+and+more!5e0!3m2!1sen!2sin!4v1"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="footer-logo">INITIUM<span>.</span></div>
+      <div class="footer-tagline">Where Every First Begins</div>
+      <p class="footer-about">Initium Café is Pune's most intimate dining experience — a space where luxury meets authenticity, and every visit feels like a first.</p>
+      <div class="rating-badge" style="margin-top:1.5rem;">
+        <span class="stars">★★★★★</span>
+        <span>4.9 · Google Reviews</span>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#ambiance">Ambiance</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#specials">Daily Specials</a></li>
+        <li><a href="#about">Our Story</a></li>
+        <li><a href="#contact">Reserve</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Hours</h4>
+      <ul class="footer-hours">
+        <li>Mon – Fri: 8 AM – 10 PM</li>
+        <li class="today">Sat – Sun: 8 AM – 11 PM</li>
+        <li style="margin-top:0.8rem;color:rgba(248,243,236,0.3);">Kitchen closes 30 min before.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Initium Café, Hinjawadi, Pune. All rights reserved.</p>
+    <p>Designed with ♥ for Pune's dreamers</p>
+    <p><a href="tel:+918788006520">+91 87880 06520</a></p>
+  </div>
+</footer>
+
+<script>
+  // Nav scroll
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 50);
+  });
+
+  // Hamburger nav
+  function toggleNav() {
+    document.getElementById('nav-links').classList.toggle('open');
+    document.getElementById('nav-overlay').classList.toggle('open');
+  }
+  document.querySelectorAll('#nav-links a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('nav-links').classList.remove('open');
+      document.getElementById('nav-overlay').classList.remove('open');
+    });
+  });
+
+  // Menu tabs
+  function switchTab(btn, tab) {
+    document.querySelectorAll('.menu-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById('tab-' + tab).classList.add('active');
+  }
+
+  // Reveal on scroll
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 80);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => io.observe(r));
+
+  // Booking form
+  function submitBooking() {
+    const fname = document.getElementById('fname').value;
+    const phone = document.getElementById('phone').value;
+    if (!fname || !phone) { alert('Please fill in your name and phone number.'); return; }
+    document.getElementById('booking-form').style.display = 'none';
+    document.getElementById('success-msg').style.display = 'block';
+  }
+
+  // Set min date for booking
+  const dateInput = document.getElementById('bdate');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+    dateInput.value = today;
+  }
+</script>
+</body>
+</html>
